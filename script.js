@@ -32,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // ========== MODAL GALERÍA ==========
-const allGalleryItem = document.querySelectorAll(".gallery-item"); // Selecciona todos los elementos con la clase "gallery-item" que son las imagenes 
+const allGalleryItem = document.querySelectorAll(".gallery-item"); // Selecciona todos los elementos con la clase "gallery-item" que son las imagenes
 const modal = document.getElementById("modalGaleria");
 // Selecciona el elemento con el ID "modalGaleria" que es el contenedor del modal
 const modalImage = document.getElementById("imagenModal");
@@ -44,11 +44,18 @@ function cerrarModal() {
   modal.style.display = "none";
 }
 
+
+function abrirModal(src) {
+  modal.style.display = "block";
+  modalImage.src = src;
+  // se obtiene la src actualizada para mostrar en el modal onclick="abrirModal(this.src)" es la clave aqui ya que con esto se obtiene la src y en esta funcion la actualizamos
+}
+
 allGalleryItem.forEach((item) => {
   item.addEventListener("click", () => {
     const img = item.querySelector("img");
-    modal.style.display = "block";
-    modalImage.src = img.src;
+    abrirModal(img.src);
+    //obtenemos la img de cada item y le agregamos el evento que hara que le pasemos la img o mejor dicho la src de la imagen para actualizarla en el abrirModal
   });
 });
 
@@ -57,6 +64,7 @@ closeBtn.addEventListener("click", cerrarModal);
 modal.addEventListener("click", (e) => {
   if (e.target !== modalImage) {
     cerrarModal();
+    // si le das click a la imagen no hace nada si no cierra el modal
   }
 });
 
