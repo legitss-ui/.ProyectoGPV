@@ -601,6 +601,8 @@ footer {
     max-height: 90vh;
     object-fit: contain;
     animation: slideInImagen 0.3s ease;
+    border-radius: 20px;
+    border: #059669 solid 12px;
 }
 
 @keyframes slideInImagen {
