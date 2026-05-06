@@ -1,23 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<!--
-el ? le decimos que es una instruccion, no contenido
-
-com el ?xml es como declarar el lenguaje que queremos usar y con ? las instrucciones que le daremos despues 
-
-con version="1.0" le decimos que es la version del lenguaje que estamos usando, en este caso la 1.0 la ams universal, el que puede leer o definir cualquier idioma o usar idioma estandar 
-
-con encoding="UTF-8" le decimos el formato de lenguaje que es, en este caso el español
--->
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!-- xmlns es como decirle que idioma, que reglas seguir y acentos tiene este lenguaje a alguien para que lo pueda entender/estudiar en este caso entender -->
     <url>
         <loc>https://proyecto-gpv.vercel.app/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <!-- le decimos con loc o locate donde esta la pagina y como tiene prioridadan en 1 que es el maximo signidica que es la principal -->
     </url>
     <url>
         <loc>https://proyecto-gpv.vercel.app/GPVAlmacenForm.html</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <!-- subpagina que tiene el 0.8 para que google sepa que es pagina secundaria y le decimos donde se indexa -->
     </url>
 </urlset>
