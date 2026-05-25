@@ -88,6 +88,23 @@ header {
     border-radius: 20px;
 }
 
+
+.nav-menu .fondo-diferente {
+    background-color: #059669;
+    color: white;
+    width: 120px;
+    text-align: center;
+}
+
+.nav-menu .fondo-diferente a {
+    font-size: 0.95rem;
+}
+
+.nav-menu .fondo-diferente:hover {
+    background-color: #059669;
+    opacity: 0.7;
+}
+
 .nav-menu li a {
     text-decoration: none;
     color: var(--text-secondary);
@@ -341,24 +358,6 @@ tr:hover {
     font-weight: 500;
 }
 
-.nav-menu .fondo-diferente {
-    background-color: #059669;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    margin: auto 10px;
-}
-
-.nav-menu .fondo-diferente:hover {
-    background-color: #059669;
-    opacity: 0.9;
-    margin: auto 20px;
-}
 
 /* CARDS */
 .cards-grid {
@@ -707,6 +706,12 @@ footer {
         display: none;
     }
 
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     nav.active {
         position: fixed;
         top: 0;
@@ -726,10 +731,11 @@ footer {
     .toggle-btn.active {
         display: block;
         position: fixed;
-        bottom: 2rem;
+        bottom: 0.75rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 2003;
+       
     }
 
     .nav-hamburger span {
