@@ -245,6 +245,39 @@ h2 {
     font-weight: 900;
 }
 
+.empresas-aliadas {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-align: center;
+    margin: 2rem 0;
+    background-color: var(--accent-light);
+}
+.marquesina {
+  width: 100%;
+  border:none;
+  overflow: hidden; /* Oculta el texto cuando sale del contenedor */
+  border: 1px solid #ccc;
+  white-space: nowrap; /* Evita que el texto salte de línea */
+}
+
+.marquesina p {
+  display: inline-block;
+  padding-right: 100%; /* Empuja el texto para que empiece fuera a la izquierda */
+  animation: mover-izq-a-der 7s linear infinite;
+}
+
+@keyframes mover-izq-a-der {
+  0% {
+    transform: translateX(-100%); /* Inicia fuera a la izquierda */
+  }
+  100% {
+    transform: translateX(100%); /* Termina fuera a la derecha */
+  }
+}   
+
+
 /* POR QUÉ ELEGIRNOS */
 .why-us-grid {
     display: grid;
@@ -735,7 +768,7 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         z-index: 2003;
-       
+
     }
 
     .nav-hamburger span {
