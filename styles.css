@@ -254,28 +254,78 @@ h2 {
     margin: 2rem 0;
     background-color: var(--accent-light);
 }
-.marquesina {
-  width: 100%;
-  border:none;
-  overflow: hidden; /* Oculta el texto cuando sale del contenedor */
-  border: 1px solid #ccc;
-  white-space: nowrap; /* Evita que el texto salte de línea */
+
+/* MARQUEE INFINITO */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    padding: 2rem 0;
+    border-top: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
 }
 
-.marquesina p {
-  display: inline-block;
-  padding-right: 100%; /* Empuja el texto para que empiece fuera a la izquierda */
-  animation: mover-izq-a-der 7s linear infinite;
+.marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll-marquee 15s linear infinite;
+    width: fit-content;
 }
 
-@keyframes mover-izq-a-der {
-  0% {
-    transform: translateX(-100%); /* Inicia fuera a la izquierda */
-  }
-  100% {
-    transform: translateX(100%); /* Termina fuera a la derecha */
-  }
-}   
+.marquee-item .naranja{
+    color: orange;
+}
+
+.marquee-item .negro{
+    color: rgb(63, 56, 56);
+}
+
+.marquee-item .azul{
+    color: rgb(9, 9, 80);
+}
+
+.marquee-item .cafe{
+    color: #8B4513;
+}
+
+.marquee-item .verde{
+    color: green;
+}
+
+.marquee-item .amarillo{
+    color: yellow;
+}
+
+
+.marquee-item .azul-oscuro{
+    color: rgb(3, 3, 43);
+}
+
+.marquee-item .cafe-oscuro{
+    color: rgb(78, 44, 6);
+}
+
+
+.marquee-item .verde{
+    color: orange;
+}
+
+.marquee-item {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 
 /* POR QUÉ ELEGIRNOS */

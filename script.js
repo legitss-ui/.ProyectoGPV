@@ -80,3 +80,17 @@ if (window.innerWidth <= 768) {
     button.classList.toggle("active");
   });
 }
+
+
+// MARQUEE INFINITO
+function initMarquee() {
+    const marqueeTrack = document.querySelector('.marquee-track');
+    
+    // Duplicamos los items para crear efecto infinito
+    const items = marqueeTrack.innerHTML;
+    marqueeTrack.innerHTML = items + items;
+}
+
+// Ejecutar cuando carga la página
+document.addEventListener('DOMContentLoaded', initMarquee);
+
