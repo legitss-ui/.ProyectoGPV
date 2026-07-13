@@ -93,4 +93,3 @@ function initMarquee() {
 
 // Ejecutar cuando carga la página
 document.addEventListener('DOMContentLoaded', initMarquee);
-
